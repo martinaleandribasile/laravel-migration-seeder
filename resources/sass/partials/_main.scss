@@ -1,0 +1,36 @@
+.main {
+    width: 1200px;
+    margin: 0 auto;
+
+    .title {
+        text-align: center;
+        padding: 50px 0;
+        color: green;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 50px 0;
+    }
+
+    .box>* {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-train {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .card-train>* {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+}
