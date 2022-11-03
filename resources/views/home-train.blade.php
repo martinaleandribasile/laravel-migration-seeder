@@ -12,7 +12,7 @@
             <h3>Partenza</h3>
             <h3>Arrivo</h3>
             <h3>Orario</h3>
-            <h3>Destinazione</h3>
+            <h3>Stato treno</h3>
         </div>
         @foreach ($trains as $train)
             <div class="card-train">
@@ -25,7 +25,17 @@
 
                 <p>{{ $train['orario_partenza'] }}</p>
 
-                <p>{{ $train['stazione_arrivo'] }}</p>
+                @if ($train['treno_cancellato'] == 1)
+                    {
+                    <p> TRENO CANCELLATO</p>
+                    }
+                @else
+                    @if ($train['treno_in_orario'] == 0)
+                        <p>TRENO IN RITARDO</p>
+                    @else
+                        <p>TRENO IN ORARIO</p>
+                    @endif
+                @endif
             </div>
         @endforeach
     </section>
